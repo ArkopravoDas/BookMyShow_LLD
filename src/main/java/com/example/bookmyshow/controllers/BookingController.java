@@ -21,6 +21,6 @@ public class BookingController {
     @PostMapping()
     public Booking createBooking(@RequestBody CreateBooking createBooking) {
 
-        return bookingService.bookTicket(null);
+        return bookingService.bookTicket(createBooking.getSeatIds());
     }
 }

@@ -2,15 +2,20 @@ package com.example.bookmyshow.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
 @Entity
+@Data
 public class ShowSeat extends BaseModel{
     @ManyToOne
     private Seat seat;
+
+    @ManyToOne
+    private Show show;
 
     private int price;
 
